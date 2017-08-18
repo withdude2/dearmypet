@@ -23,8 +23,8 @@ public class DatabaseManager {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 //		dataSource.setUrl("jdbc:mysql://localhost:3306/mydb");
 		dataSource.setUrl("jdbc:mysql://tommy.heliohost.org:3306/dearpet_my?useUnicode=true&characterEncoding=UTF-8");
-		dataSource.setUsername("dearpet_user");
-		dataSource.setPassword("cat@kic@0102!@");
+		dataSource.setUsername("");
+		dataSource.setPassword("");
 		dataSource.setMaxWaitMillis(2000); // 2√ 
 		dataSource.setInitialSize(3);
 		dataSource.setMaxTotal(50);
