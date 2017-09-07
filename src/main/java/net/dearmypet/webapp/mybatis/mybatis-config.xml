@@ -10,16 +10,22 @@
 	</settings>
 
 	<!-- Aliases -->
+	<!--
+		MyBatis가 net.dearmypet.vo 패키지를 검색하여 빈즈를 등록한다.
+		<package name="net.dearmypet.vo" />
+	-->
 	<typeAliases>
+		<!-- <typeAlias alias="dearmypet.vo" type="net.dearmypet.vo"/> -->
 		<package name="net.dearmypet.vo" />
 	</typeAliases>
+	
 
 	<!-- mapper 설정 -->
-	<mappers>
-		<mapper resource="classpath:net/dearmypet/mybatis/MemberMapper.xml" />
-		<!-- <mapper resource="net/dearmypet/mybatis/MemberMapper.xml" /> -->
-	</mappers>
-
+<!-- 		<mapper resource="classpath:/net/dearmypet/webapp/mybatis/BoardMapper.xml"/> -->
+		<!-- <mapper resource="classpath*:net/dearmypet/webapp/mybatis/*Mapper.xml"/> -->
+	<!-- <mappers>
+		<mapper resource="net/dearmypet/webapp/mybatis/MemberMapper.xml"/>
+	</mappers> -->
 </configuration>
 
 

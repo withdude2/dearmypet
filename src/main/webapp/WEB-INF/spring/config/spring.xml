@@ -8,33 +8,37 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
 	<!-- mybatis 및 DB 설정 -->
-<!-- 
 	<bean name="SqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"
 		c:sqlSessionFactory-ref="SqlSessionFactoryBean" />
- -->
+
 	<!-- sqlsessionFactroybean 설정 -->
-<!-- 	<bean name="SqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!--
+		mapperLocations을 통해 sql매퍼파일들을 등록한다.
+		대신 configLocation에 등록된 xml파일에서 <mappers><mapper resource="매퍼파일.xml">은 사용안한다.
+	 -->
+ 	<bean name="SqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation"
-			value="classpath:net.dearmypet/mybatis/mybatis-config.xml" />
+			value="classpath:net/dearmypet/webapp/mybatis/mybatis-config.xml" />
 		<property name="dataSource" ref="BasicDataSourceclass" />
+		<property name="mapperLocations"  value="classpath:net/dearmypet/webapp/mybatis/*Mapper.xml" />
 	</bean>
- -->
+
 
 	<!-- BasicDataSourceclass BEAN -->
-<!-- 	<bean name="BasicDataSourceclass" class="org.apache.commons.dbcp2.BasicDataSource">
+ 	<bean name="BasicDataSourceclass" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/mydb?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="url" value="jdbc:mysql://localhost:3306/heroku_93dd468daebac93?useUnicode=true&amp;characterEncoding=utf8" />
 		<property name="username" value="root" />
 		<property name="password" value="1234" />
 		<property name="maxTotal" value="50" />
 	</bean>
- -->
-		<!-- 한글처리 -->
-	<!-- <mvc:annotation-driven>
+ 
+	<!-- 한글처리 -->
+	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter" c:defaultCharset="UTF-8" />
 		</mvc:message-converters>
-	</mvc:annotation-driven> -->
+	</mvc:annotation-driven>
 
 
 
@@ -55,14 +59,14 @@
 
 	
 	<!-- post방식으로 이동시 캐시삭제 -->
-	<!-- <mvc:interceptors>
+	<mvc:interceptors>
 		<bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
 			<property name="cacheSeconds" value="0" />
 			<property name="useExpiresHeader" value="true" />
 			<property name="useCacheControlHeader" value="true" />
 			<property name="useCacheControlNoStore" value="true" />
 		</bean>
-	</mvc:interceptors> -->
+	</mvc:interceptors>
 
 	<!-- 프로젝트 관련 view 설정 -->
 	<!-- View Resolver 관련 설정 -->

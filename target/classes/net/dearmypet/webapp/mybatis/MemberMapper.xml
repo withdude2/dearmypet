@@ -4,18 +4,18 @@
 <mapper namespace="MemberMapper">
 
 	<!-- MemberMapper 모든 값 -->
-	<resultMap type="tpNotice" id="memberResultmap">
+	<!-- <resultMap type="tpNotice" id="memberResultmap">
 		<result property="m_name" column="m_name"/>
 		<result property="m_id" column="m_id"/>
-	</resultMap>
+	</resultMap> -->
 	
 	 
 	<!-- no로 고객조회 -->
-	<select id = "selectTpNoticeByNum" parameterType = "int" resultMap ="memberResultmap">
+	<!-- <select id = "selectTpNoticeByNum" parameterType = "int" resultMap ="memberResultmap">
 		Select m_name, m_id
 		From member where m_no = #{m_no}
 	</select>
-	
+	 -->
 	
 </mapper>
 
