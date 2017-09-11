@@ -15,16 +15,14 @@
 		<package name="net.dearmypet.vo" />
 	-->
 	<typeAliases>
-		<!-- <typeAlias alias="dearmypet.vo" type="net.dearmypet.vo"/> -->
-		<package name="net.dearmypet.vo" />
+		<!-- <typeAlias alias="vo.LoginVO" type="net.dearmypet.webapp.vo.LoginVO"/> -->
+		<package name="net.dearmypet.webapp.vo" />
 	</typeAliases>
 	
 
 	<!-- mapper 설정 -->
-<!-- 		<mapper resource="classpath:/net/dearmypet/webapp/mybatis/BoardMapper.xml"/> -->
-		<!-- <mapper resource="classpath*:net/dearmypet/webapp/mybatis/*Mapper.xml"/> -->
 	<!-- <mappers>
-		<mapper resource="net/dearmypet/webapp/mybatis/MemberMapper.xml"/>
+		<mapper resource="net/dearmypet/webapp/mybatis/memberMapper.xml"/>
 	</mappers> -->
 </configuration>
 

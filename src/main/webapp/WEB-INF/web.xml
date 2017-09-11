@@ -53,7 +53,20 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springDispatcherServlet</servlet-name>
+		<!-- <url-pattern>/*</url-pattern> -->
 		<url-pattern>*.dmp</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>springDispatcherServlet2</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/config/spring.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springDispatcherServlet2</servlet-name>
+		<url-pattern>*.jsn</url-pattern>
 	</servlet-mapping>
 	<filter>
 		<filter-name>encoding</filter-name>
@@ -67,6 +80,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>encoding</filter-name>
+		<!-- <url-pattern>/*</url-pattern> -->
 		<url-pattern>*.dmp</url-pattern>
 	</filter-mapping>
 

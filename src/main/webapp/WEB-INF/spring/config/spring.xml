@@ -25,9 +25,13 @@
 
 
 	<!-- BasicDataSourceclass BEAN -->
+		<!-- 
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/heroku_93dd468daebac93?useUnicode=true&amp;characterEncoding=utf8&amp;useTimezone=true&amp;serverTimezone=UTC&amp;connectTimeout=3000&amp;verifyServerCertificate=false&amp;useSSL=false" />
+		 -->
  	<bean name="BasicDataSourceclass" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/heroku_93dd468daebac93?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/heroku_93dd468daebac93?useUnicode=true&amp;characterEncoding=utf8" />
 		<property name="username" value="root" />
 		<property name="password" value="1234" />
 		<property name="maxTotal" value="50" />
@@ -39,8 +43,6 @@
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter" c:defaultCharset="UTF-8" />
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-
-
 
 	<!-- bean anotation 스캔 -->
 	<context:component-scan base-package="net.dearmypet.webapp" />
@@ -54,9 +56,8 @@
 	<mvc:view-controller path="/Member/memberList.dmp" view-name="Member/memberList.tiles" />
 
 	<!-- exception 메시지 property -->
-	<!-- <bean class="org.springframework.context.support.ResourceBundleMessageSource"
-		name="messageSource" p:basename="net.dearmypet.webapp.exception.error_message" /> -->
-
+	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
+		name="messageSource" p:basename="net.dearmypet.webapp.exception.error_message" />
 	
 	<!-- post방식으로 이동시 캐시삭제 -->
 	<mvc:interceptors>
@@ -70,9 +71,29 @@
 
 	<!-- 프로젝트 관련 view 설정 -->
 	<!-- View Resolver 관련 설정 -->
+	<!-- 파일 업로드 -->
+	<context:component-scan base-package="spring.fileup.controller"/>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="1" />
 	<bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" p:order="2" />
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="3" />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="4" />
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" /> -->
+	<!--// 프로젝트 관련 view 설정 -->
+	
+	<mvc:annotation-driven />
+	
+	
+<mvc:annotation-driven  content-negotiation-manager="contentNegotiationManager" /> 
+ <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+      <property name="favorPathExtension" value="false" />
+      <property name="favorParameter" value="true" />
+      <property name="mediaTypes" >
+           <value>
+                json=application/json
+                xml=application/xml
+           </value>
+      </property>
+ </bean>
 
 
 	<!-- Tiles 설정 -->
@@ -84,11 +105,14 @@
 		</property>
 	</bean>
 
+	<!-- Jackson JSON -->
+	<!-- <bean id="jacksonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 
-
+	<bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" /> -->
 
 	<!-- 파일 자원 관련 패스 설정 -->
-	<!-- <mvc:resources mapping="/resources/**" location="/resources/" /> -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<!-- 파일 업로드 -->
 	<!-- <context:component-scan base-package="spring.fileup.controller"/>
