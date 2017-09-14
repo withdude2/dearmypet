@@ -297,6 +297,23 @@
 	    </dependency>
 		<!-- end : heroku -->
 		
+		<!-- Java Simplified Encryption : Encryption for .properties file -->
+		<!-- https://mvnrepository.com/artifact/org.jasypt/jasypt -->
+<!-- 	<dependency>
+		    <groupId>org.jasypt</groupId>
+		    <artifactId>jasypt</artifactId>
+		    <version>1.9.2</version>
+		</dependency>
+		 -->
+		<!-- https://mvnrepository.com/artifact/org.jasypt/jasypt-spring3 -->
+		<dependency>
+		    <groupId>org.jasypt</groupId>
+		    <artifactId>jasypt-spring3</artifactId>
+		    <version>1.9.2</version>
+		</dependency>
+		
+				
+		
 	</dependencies>
     <build>
         <plugins>

@@ -1,3 +1,11 @@
+Create user 'b577b6dc64b6d5'@'localhost' identified by '4e88dc9d';
+-- grant all privileges on *.* to 'userid'@'%';
+Grant all privileges on *.* to 'b577b6dc64b6d5'@'localhost';
+
+Create table heroku_93dd468daebac93
+Use heroku_93dd468daebac93
+
+
 -- 추가정보 입력회원
 CREATE TABLE member (
 	m_no           INT UNSIGNED NOT NULL COMMENT '회원번호', -- 회원번호

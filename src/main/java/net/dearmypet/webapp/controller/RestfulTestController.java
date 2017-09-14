@@ -6,13 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import net.dearmypet.webapp.service.LoginService;
 import net.dearmypet.webapp.vo.*;
 
+// 테스트 URL :  http://localhost/dearpet/sendLoginVO.jsn
 @RestController
 //@RequestMapping("/basic/*")
 public class RestfulTestController {
-	@Autowired
+//	@Autowired
 //	LoginVO  loginVO;
+
+	@Autowired
+	private LoginService loginService;
 	
 	// json객체 리턴
 //    @RequestMapping("/sendLoginVO")
@@ -35,10 +41,13 @@ public class RestfulTestController {
 		strarr[0] = "first";
 		strarr[1] = "second";
 		strarr[2] = "third";
-		map.put("String", "aaa");
-		map.put("String", "bbb");
-		map.put("String", "ccc");
+		Map mapLogin = loginService.getLoginAllList();
+		
+		map.put("str1", "aaa");
+		map.put("str2", "bbb");
+		map.put("str3", "ccc");
 		map.put("String", strarr);
+		map.put("mapLogin", mapLogin);
 		
 		return map;
     }
