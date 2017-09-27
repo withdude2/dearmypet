@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- null 처리 -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL" />
+		<!-- <setting name="jdbcTypeForNull" value="OTHER" /> -->
+	</settings>
+
+	<!-- Aliases -->
+	<!--
+		MyBatis가 net.dearmypet.vo 패키지를 검색하여 빈즈를 등록한다.
+		<package name="net.dearmypet.vo" />
+	-->
+	<typeAliases>
+		<!-- <typeAlias alias="vo.LoginVO" type="net.dearmypet.webapp.vo.LoginVO"/> -->
+		<package name="net.dearmypet.webapp.vo" />
+	</typeAliases>
+	
+
+	<!-- mapper 설정 -->
+	<!-- <mappers>
+		<mapper resource="net/dearmypet/webapp/mybatis/memberMapper.xml"/>
+	</mappers> -->
+</configuration>
+
+
