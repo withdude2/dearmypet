@@ -18,9 +18,9 @@
 	 -->
  	<bean name="SqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation"
-			value="classpath*:net/dearmypet/webapp/mybatis/mybatis-config.xml" />
+			value="classpath*:/net/dearmypet/webapp/mybatis/mybatis-config.xml" />
 		<property name="dataSource" ref="BasicDataSourceclass" />
-		<property name="mapperLocations"  value="classpath*:net/dearmypet/webapp/mybatis/*Mapper.xml" />
+		<property name="mapperLocations"  value="classpath*:/net/dearmypet/webapp/mybatis/*Mapper.xml" />
 	</bean>
 	<!-- 
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
