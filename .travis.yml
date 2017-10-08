@@ -5,8 +5,6 @@ deploy:
   provider: openshift
   user: $OPENSHIFT_USERNAME
   password: $OPENSHIFT_PASSWORD
-  domain: $OPENSHIFT_DOMAIN
-  app: $OPENSHIFT_APP
-  on:
-    repo: withdude2/dearmypet
-    branch: master
+  domain: dearmypet.net
+  app: dearmypet
+  on: master
