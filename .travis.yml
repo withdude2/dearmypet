@@ -11,3 +11,4 @@ deploy:
   password: $OPENSHIFT_PASSWORD
   domain: dearmypet.net
   app: dearmypet
+  
