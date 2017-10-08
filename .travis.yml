@@ -1,11 +1,13 @@
 language: java
-script: mvn package -Popenshift
 jdk:
   - oraclejdk8
+script: mvn clean verify
+branches:
+  only:
+    - master
 deploy:
   provider: openshift
   user: $OPENSHIFT_USERNAME
   password: $OPENSHIFT_PASSWORD
   domain: dearmypet.net
   app: dearmypet
-  on: master
