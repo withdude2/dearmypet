@@ -1,7 +1,14 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn clean verify
-branches:
-  only:
-    - master
+after_success:
+  - ls -la ./target
+deploy:
+  provider: openshift
+  user: $OPENSHIFT_USERNAME
+  password: $OPENSHIFT_PASSWORD
+  domain: $OPENSHIFT_DOMAIN
+  app: $OPENSHIFT_APP
+  on:
+    repo: withdude2/dearmypet
+    branch: master
