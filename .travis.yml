@@ -9,6 +9,5 @@ deploy:
   provider: openshift
   user: $OPENSHIFT_USERNAME
   password: $OPENSHIFT_PASSWORD
-  domain: dearmypet.net
   app: dearmypet
   
