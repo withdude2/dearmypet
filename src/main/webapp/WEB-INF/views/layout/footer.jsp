@@ -59,5 +59,13 @@
 		 js.src = "//connect.facebook.net/en_US/sdk.js";
 		 fjs.parentNode.insertBefore(js, fjs);
 	 }(document, 'script', 'facebook-jssdk'));
+	
+
+	// 로그인 상태를 확인
+	function checkLoginState() {
+		FB.getLoginStatus(function(response) {
+		statusChangeCallback(response);
+	});
+	}
 </script>
 

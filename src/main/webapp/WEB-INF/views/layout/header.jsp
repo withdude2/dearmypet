@@ -6,6 +6,10 @@
 		-tiles-
 		WEB-INF/views/layout/header.jsp
 		</div>
+		<div>로그인 버튼 : <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button></div>
 	</header>
 	<!--header end-->
 	
