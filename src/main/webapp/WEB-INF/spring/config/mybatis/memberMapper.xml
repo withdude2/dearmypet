@@ -14,4 +14,3 @@
 	<sql id="selectAllMember"></sql>
 	
 </mapper>
-

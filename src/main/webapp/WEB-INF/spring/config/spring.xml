@@ -92,6 +92,21 @@
 	<!-- 메인 페이지 연결 -->
 	<mvc:view-controller path="/main.dmp" view-name="main.tiles" />
 	<!-- 회원가입 페이지 -->
+	<mvc:view-controller path="/main_Sign_Up.dmp" view-name="main_Sign_Up.tiles" />
+	<!-- 동물정보 페이지 -->
+	<mvc:view-controller path="/main_know.dmp" view-name="main_know.tiles" />
+	<!-- 공지사항 페이지 -->
+	<mvc:view-controller path="/main_notice.dmp" view-name="main_notice.tiles" />
+	<!-- 회사정보 페이지 -->
+	<mvc:view-controller path="/main_about.dmp" view-name="main_about.tiles" />
+	
+	<!-- 게시판 관련 페이지 연결 -->
+	<mvc:view-controller path="/board/board.dmp" view-name="board/board.tiles" />
+	<mvc:view-controller path="/board/missing.dmp" view-name="board/missing.tiles" />
+	<mvc:view-controller path="/board/protect.dmp" view-name="board/protect.tiles" />
+	<mvc:view-controller path="/board/protect_form.dmp" view-name="board/protect_form.tiles" />
+	
+	
 	<!-- <mvc:view-controller path="/Member/registerMember.dmp" view-name="Member/registerMember.tiles" /> -->
 	<!-- test -->
 	<mvc:view-controller path="/Member/memberList.dmp" view-name="Member/memberList.tiles" />

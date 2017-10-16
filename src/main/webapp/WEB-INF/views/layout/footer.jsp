@@ -5,19 +5,28 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!-- footer start -->
-	<footer class="">
-		<div class="">
-			/WEB-INF/views/layout/footer.jsp
-		</div>
-	</footer>
-	<!-- footer end-->
+	<div class="wrapper main-footer">
+		<footer>
+			<address>주소</address>
+			<p>copyright</p>
+		</footer>
+	</div>
+<!-- footer end-->
 
-	<!-- js placed at the end of the document so the pages load faster -->
-	<script src="${initParam.rootPath}/js/bootstrap.min.js"></script>
-
-	<!--common script for all pages-->
-	<script src="${initParam.rootPath}/js/common-scripts.js"></script>
+	<!-- 각 페이지별 js 통합내용 -->
+	<!-- JS Global Compulsory -->
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/smoothScroll.js"></script>
 	
+	<!-- JS Customization -->
+	<script type="text/javascript" src="${initParam.rootPath}/assets/js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="${initParam.rootPath}/assets/js/app.js"></script>
+
 <%String strCurrentUrl = request.getScheme() + "://dearmypet.net" +request.getAttribute("url");%>
 	
 	
