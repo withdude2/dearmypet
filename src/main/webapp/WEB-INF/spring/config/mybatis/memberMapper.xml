@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="MemberMapper">
+
+	<!-- MemberMapper 모든 값 -->
+	<!-- 
+	<resultMap type="vo" id="memberResultmap">
+		<result property="m_name" column="m_name"/>
+		<result property="m_id" column="m_id"/>
+	</resultMap>
+	 -->
+	
+	<sql id="selectAllMember"></sql>
+	
+</mapper>
+
