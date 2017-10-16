@@ -60,7 +60,6 @@
 		});
 		FB.AppEvents.logPageView();
 	};
-
 	(function(d, s, id){
 		 var js, fjs = d.getElementsByTagName(s)[0];
 		 if (d.getElementById(id)) {return;}
@@ -69,7 +68,6 @@
 		 fjs.parentNode.insertBefore(js, fjs);
 	 }(document, 'script', 'facebook-jssdk'));
 	
-
 	// 로그인 상태를 확인
 	function checkLoginState() {
 		FB.getLoginStatus(function(response) {
@@ -77,4 +75,3 @@
 	});
 	}
 </script>
-

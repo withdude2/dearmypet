@@ -36,28 +36,52 @@
 	
 	<title>Home | Dear My Pet</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="${initParam.rootPath}/css/bootstrap.min.css" rel="stylesheet">
-	<link href="${initParam.rootPath}/css/theme.css" rel="stylesheet">
-	<link href="${initParam.rootPath}/css/bootstrap-reset.css" rel="stylesheet">
-	<!-- External CSS -->
-	<link href="${initParam.rootPath}/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-	<!-- Custom styles -->
-	<link href="${initParam.rootPath}/css/style.css" rel="stylesheet">
+
 	
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
-	<!--[if lt IE 9]>
-	<script src="${initParam.rootPath}/js/html5shiv.js"></script>
-	<script src="${initParam.rootPath}/js/respond.min.js"></script>
-	<![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+<!--[if lt IE 9]>
+<script src="${initParam.rootPath}/js/html5shiv.js"></script>
+<script src="${initParam.rootPath}/js/respond.min.js"></script>
+<![endif]-->
+<!-- Web Fonts -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
+<!-- CSS Global Compulsory -->
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/css/style.css">
+<!-- CSS Header and Footer -->
+<link rel="stylesheet" href="${initParam.rootPath}/assets/css/headers/header-default.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/css/footers/footer-v1.css">
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/animate.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+<link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
+
+<link rel="stylesheet" href="${initParam.rootPath}/assets/css/form.css">
+
+<!-- 페이지별 불러오는 CSS들 -->
+<%
+	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp")){
+%>
+	<tiles:insertAttribute name = "css"/>
+<%
+	}
+%>
+
+<!-- 종료 -->
 	
+<!--[if lt IE 9]><link rel="stylesheet" href="${initParam.rootPath}/assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css"><![endif]-->
+<!-- CSS Customization -->
+<link rel="stylesheet" href="${initParam.rootPath}/assets/css/custom.css">
+
 </head>
 <body>
-	
+
 	<tiles:insertAttribute name ="header"/>
 
 	<!-- container -->
-	<div class="container">
+	<div class="wrapper main-body-content">
 		<tiles:insertAttribute name = "body"/>
 	</div>
 	<!--// container -->
@@ -65,5 +89,17 @@
 	<!-- footer -->
 	<tiles:insertAttribute name = "footer"/>
 	<!--// footer -->
+	
+	<!-- js -->
+	<%
+	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp")){
+	%>
+		<tiles:insertAttribute name = "js"/>
+	<%
+		}
+	%>
+	<!--// js -->
+	
+	
 </body>
 </html>

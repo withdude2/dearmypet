@@ -1,0 +1,162 @@
+/* Add here all your css styles (customizations) */
+
+/* 글씨가 써지는 효과 */
+@import url('https://fonts.googleapis.com/css?family=Tangerine:700');
+.drawsvg,svg {
+  width: 100%;
+}
+
+.stroke {
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-dasharray: 0 250;
+  stroke-opacity: 1;
+  fill: none;
+  -webkit-animation: stroke_offset 5s infinite;
+  animation: stroke_offset 5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+  animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+
+@-webkit-keyframes stroke_offset {
+  100%, 25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
+  }
+  50%, 75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: .75;
+  }
+  55%, 70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
+  }
+}
+
+@keyframes stroke_offset {
+  100%, 25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
+  }
+  50%, 75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: .75;
+  }
+  55%, 70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
+  }
+}
+
+.fill {
+  fill: #000;
+  fill-opacity: 0;
+  -webkit-animation: fill_offset 5s infinite;
+  animation: fill_offset 5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+  animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+@-webkit-keyframes fill_offset {
+  100%, 25%, 35%, 90% {
+    fill-opacity: 0;
+  }
+  50%, 70% {
+    fill-opacity: 1;
+  }
+}
+@keyframes fill_offset {
+  100%, 25%, 35%, 90% {
+    fill-opacity: 0;
+  }
+  50%, 70% {
+    fill-opacity: 1;
+  }
+}
+#fade-text {
+  font-family: 'Tangerine', cursive;
+  font-size: 7em;
+  letter-spacing:10px;
+  text-shadow: 4px 4px 5px gray;
+}
+/* 글씨가 써지는 효과 종료 */
+/* mainPage에 있던 css */
+.main-header {
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.main-body-nav {
+	box-sizing: border-box;
+	background-color: #f2f4f7;
+}
+.main-body-content{
+	box-sizing: border-box;
+	height: 100%;
+	background-color: #f2f4f7;
+	padding-top:10px;
+}
+
+.main-footer {
+	border-top: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 100px;
+}
+footer{
+	max-width:1170px;
+	padding:20px;
+	margin:0 auto;
+}
+.login_btn{
+	margin-top : 5px;
+}
+.logo_image{
+	margin-top : 10px;
+	width:350px;
+	height:100px;
+}
+.login-header .col-md-3{
+	margin:0 auto;
+}
+.text-block-type1{
+	border:1px solid #dee3eb;
+	box-shadow:0 0 3px #eee;
+	background-color: white;
+	margin: 0 auto;
+}
+.body-benner{
+	max-width:1170px;
+	padding:20px;
+}
+.body-text{
+	max-width:1170px;
+	padding:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#nav-logout-button{
+	display: none;
+}
+
+@media (min-width: 991px){
+	.nav-hidden{
+		display:block!important;
+	}
+}
+@media (max-width: 991px){
+	.logo_image{
+		margin:0 auto;
+	}
+	.nav-hidden{
+		display:none;
+	}
+	.nav-hidden div{
+		display: flex;
+		justify-content: center;
+	}
+	.nav-hidden div button:first-child{
+		margin-right:10px;
+	}
+}
+/* mainPage에 있던 css종료 */
