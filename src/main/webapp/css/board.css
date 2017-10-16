@@ -1,0 +1,77 @@
+/* Add here all your css styles (customizations) */
+.screenout{position:absolute;left:-9999px;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0}
+.u_skip{position:absolute;left:-9999px;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0}
+.hodden{position:absolute;left:-9999px;width:0;height:0;overflow:hidden;visibility:hidden;font-size:0;line-height:0}
+.hide{display:none}
+
+/* .wrapper {max-width:1170px; margin:0 auto;} */
+/* .container {padding-bottom:40px; padding-top:40px;} */
+.breadcrumbs-v1 img{
+	width:100%;
+}
+.board_write_box{
+	display: flex;
+	justify-content: flex-end;	
+}
+section .custom_hr {margin:10px 0;}
+
+table.board-table {margin-left:20px;width:95%}
+.board-table tr td:FIRST-CHILD {background-color:#FFEEE6;}
+.board-table tr td:LAST-CHILD  {padding-left:20px;}
+
+.cnt_td>tr>td {
+	width:120px;
+}
+
+.news-v3 .post-shares{margin:10px 0 0 -5px;}
+
+.f_container,.c_container {width:1100px}
+
+/* .container_img1 {background: url("../img/banner_1.gif") center no-repeat;max-width:80%;height: 210px;margin: 0 auto;background-size:cover;} */
+.no-padding{
+	padding:0;
+	max-width:100%;margin: 0 auto;background-size:cover;
+}
+.header {max-width:100%;margin: 0 auto;}
+
+.sm-banner {display:none; margin:0 auto;box-shadow:0 0 3px #eee;
+                   background-color:white;border:1px solid #dee3eb;}
+.sm-banner h1, .sm-banner h4 {color:#942929; text-align:center;}
+
+.title-h2 {display:flex;}
+.news-v3 .post-shares {margin: 10px 0 0 -5px;line-height:0;}
+.modal-dialog{background-color:white;}
+.btn-right {position:relative; left:1050px;}
+.sky-form {max-width:100%;margin: 0 auto;}
+
+.search_select {max-width:100%;margin:0 auto;display:flex;justify-content:center;}
+.search_select input {margin-left:10px;}
+.search_select label {display:flex;}
+/*자유게시판  */
+.board-content {padding:20px;}
+
+/*실종 폼*/
+p.line-1 {margin-bottom:0px;line-height:34px;display: inline-block; color:#bbb;}
+
+/* form관련 */
+.p_pic{
+	margin:10px 0 0 -5px;
+}
+.item active{
+	board:1px solid black;
+}
+
+/* 미디어 쿼리부분 */
+@MEDIA screen and (max-width: 991px)  {
+	table.board-table {margin-left:0px;width:100%}
+	.no-padding {display:none;}
+	.sm-banner {display:block;background-color:#bbb;}
+}
+
+@MEDIA (min-width:768px){
+.col-sm-5{width:25%;}
+}
+
+@MEDIA (min-width:768px){
+.col-sm-7{width:75%;}
+}

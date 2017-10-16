@@ -16,11 +16,12 @@
 		mapperLocations을 통해 sql매퍼파일들을 등록한다.
 		대신 configLocation에 등록된 xml파일에서 <mappers><mapper resource="매퍼파일.xml">은 사용안한다.
 	 -->
+<!-- 		<property name="configLocation" value="classpath:/net/dearmypet/webapp/mybatis/mybatis-config.xml" /> -->
+<!-- 		<property name="mapperLocations"  value="classpath:/net/dearmypet/webapp/mybatis/*Mapper.xml" /> -->
  	<bean name="SqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="configLocation"
-			value="classpath:net/dearmypet/webapp/mybatis/mybatis-config.xml" />
+		<property name="configLocation" value="/WEB-INF/spring/config/mybatis/mybatis-config.xml" />
 		<property name="dataSource" ref="BasicDataSourceclass" />
-		<property name="mapperLocations"  value="classpath:net/dearmypet/webapp/mybatis/*Mapper.xml" />
+		<property name="mapperLocations"  value="/WEB-INF/spring/config/mybatis/*Mapper.xml" />
 	</bean>
 	<!-- 
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -31,6 +32,7 @@
 		</property>
 	</bean>
  -->
+ 
 	<bean id="encryptorConfig" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
 		<property name="algorithm" value="PBEWithMD5AndDES" />
 		<property name="password" value="dear@mypet" />
@@ -47,7 +49,7 @@
 				<value>/WEB-INF/spring/config/db.properties</value>
 			</list>
 		</property>
-</bean>
+	</bean>
 
  
 	<!-- BasicDataSourceclass BEAN -->
@@ -62,6 +64,19 @@
 		<property name="password" value="${db.password}" />
 		<property name="maxTotal" value="50" />
 	</bean>
+	
+	<!-- Heroku -->
+	<!-- <bean class="java.net.URI" id="dbUrl">
+		<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+	</bean>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
+		<property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+		<property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+	</bean> -->
+		
+	<!-- // Heroku -->
  
 	<!-- 한글처리 -->
 	<mvc:annotation-driven>
@@ -77,6 +92,21 @@
 	<!-- 메인 페이지 연결 -->
 	<mvc:view-controller path="/main.dmp" view-name="main.tiles" />
 	<!-- 회원가입 페이지 -->
+	<mvc:view-controller path="/main_Sign_Up.dmp" view-name="main_Sign_Up.tiles" />
+	<!-- 동물정보 페이지 -->
+	<mvc:view-controller path="/main_know.dmp" view-name="main_know.tiles" />
+	<!-- 공지사항 페이지 -->
+	<mvc:view-controller path="/main_notice.dmp" view-name="main_notice.tiles" />
+	<!-- 회사정보 페이지 -->
+	<mvc:view-controller path="/main_about.dmp" view-name="main_about.tiles" />
+	
+	<!-- 게시판 관련 페이지 연결 -->
+	<mvc:view-controller path="/board/board.dmp" view-name="board/board.tiles" />
+	<mvc:view-controller path="/board/missing.dmp" view-name="board/missing.tiles" />
+	<mvc:view-controller path="/board/protect.dmp" view-name="board/protect.tiles" />
+	<mvc:view-controller path="/board/protect_form.dmp" view-name="board/protect_form.tiles" />
+	
+	
 	<!-- <mvc:view-controller path="/Member/registerMember.dmp" view-name="Member/registerMember.tiles" /> -->
 	<!-- test -->
 	<mvc:view-controller path="/Member/memberList.dmp" view-name="Member/memberList.tiles" />

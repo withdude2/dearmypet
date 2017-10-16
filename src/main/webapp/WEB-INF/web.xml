@@ -8,7 +8,8 @@
 	</welcome-file-list>
 	<context-param>
 		<param-name>rootPath</param-name>
-		<param-value>/dearpet</param-value>
+		<!-- <param-value>/dearpet</param-value> -->
+		<param-value></param-value>
 	</context-param>
 	<context-param>
 		<param-name>devOrRelease</param-name>
