@@ -8,7 +8,7 @@
 				<div class="col-md-9">
 					<div class="row">
 						<div class="col-md-2">
-							<a href="${initParam.rootPath}/main.dmp">
+							<a href="/main.dmp">
 								<div class="logo_image">
 									<!-- 글써지는 애니메이션 -->
 							        <div class="drawsvg">
@@ -63,7 +63,7 @@
 	                            Home
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="main_Sign_Up.dmp">회원가입</a></li>
+	                            <li><a href="../main_Sign_Up.dmp">회원가입</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
@@ -144,10 +144,13 @@
 	                    <!-- About us -->                        
 	                    <li class="dropdown">
 	                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-	                            About us
+	                            게시판들
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="index.html">내용1</a></li>
+	                            <li><a href="/board/board.dmp">기본게시판</a></li>
+	                            <li><a href="/board/protect.dmp">임시보호게시판</a></li>
+	                            <li><a href="/board/protect_form.dmp">임시보호 폼</a></li>
+	                            <li><a href="/board/missing.dmp">실종게시판</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
