@@ -63,7 +63,7 @@
 	                            Home
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="../main_Sign_Up.dmp">회원가입</a></li>
+	                            <li><a href="/main_Sign_Up.dmp">회원가입</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
@@ -84,7 +84,7 @@
 	                            정보페이지
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="main_know.dmp">동물정보</a></li>
+	                            <li><a href="/main_know.dmp">동물정보</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
@@ -105,7 +105,7 @@
 	                            공지사항
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="main_notice.dmp">공지사항</a></li>
+	                            <li><a href="/main_notice.dmp">공지사항</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
@@ -126,7 +126,7 @@
 	                            회사소개
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="main_about.dmp">회사소개</a></li>
+	                            <li><a href="/main_about.dmp">회사소개</a></li>
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
@@ -151,7 +151,7 @@
 	                            <li><a href="/board/protect.dmp">임시보호게시판</a></li>
 	                            <li><a href="/board/protect_form.dmp">임시보호 폼</a></li>
 	                            <li><a href="/board/missing.dmp">실종게시판</a></li>
-	
+
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
 	                                <a href="javascript:void(0);">내용2(드랍다운)</a>
@@ -161,6 +161,32 @@
 	                                </ul>                                
 	                            </li>
 	                            <!-- End One Page -->
+	                        </ul>
+	                    </li>
+	                    <li class="dropdown">
+	                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+	                            진환씨
+	                        </a>
+	                        <ul class="dropdown-menu">
+	                            <li><a href="/dmp_board.dmp">관리자 게시판</a></li>
+	                        </ul>
+	                    </li>
+	                    <li class="dropdown">
+	                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+	                            금호씨<!-- 금호씨 자료들 -->
+	                        </a>
+	                        <ul class="dropdown-menu">
+	                            <li><a href="/main_survey.dmp">설문지작성</a></li>
+	                            <li><a href="/main_addNotice.dmp">상세가입</a></li>
+	                            <li><a href="/main_report.dmp">리포트</a></li>
+	                        </ul>
+	                    </li>
+	                    <li class="dropdown">
+	                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+	                            팀장님
+	                        </a>
+	                        <ul class="dropdown-menu">
+	                            <li><a href="/board/board.dmp">관리자 게시판</a></li>
 	                        </ul>
 	                    </li>
 	                    <!-- End About us -->

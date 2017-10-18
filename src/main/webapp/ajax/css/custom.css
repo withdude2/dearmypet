@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+.js-sidebar-content{white-space: nowrap;}
+
+
+div.delete-button-bar{
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	margin-top:10px;
+}
+.delete-button-bar button{
+	width:50px;
+	height:30px;
+}
+
+ h1.page-title {
+	margin: 16px 0 90px 0;
+}
+ 
+ 
+ 
+ .sidebar-nav {
+	margin-top: 30px;
+}
+#first-nav{
+	margin-top: 100px;
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

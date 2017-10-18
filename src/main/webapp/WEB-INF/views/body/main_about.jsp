@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<div class="body-text text-block-type1">
 	<div class="wrapper">
 		<div class="container">
 			<!--=== Interactive Slider ===-->
@@ -155,104 +156,106 @@
 					<!--/end row-->
 				</div>
 			</div>
-				<!--=== End Team v3 ===-->
-				<!--=== Testimonials v6 ===-->
-				<div class="bg-color-light">
-					<div class="container content-sm">
-						<div class="headline-center margin-bottom-60">
-							<h2>Dear My Pet</h2>
-							<p>사람들은 저희를 보고 뭐라고 말할까요?</p>
-						</div>
-
-						<!-- Testimonials Wrap -->
-						<div class="testimonials-v6 testimonials-wrap">
-							<div class="row margin-bottom-50">
-								<div class="col-md-6 md-margin-bottom-50">
-									<div class="testimonials-info rounded-bottom">
-										<img class="rounded-x" src="assets/img/testimonials/img5.jpg"
-											alt="">
-										<div class="testimonials-desc">
-											<p>DMP는 정말 멋있어요!</p>
-											<strong>스티븐 시걸</strong> <span>액션배우</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="testimonials-info rounded-bottom">
-										<img class="rounded-x" src="assets/img/testimonials/img6.jpg"
-											alt="">
-										<div class="testimonials-desc">
-											<p>정말로 잘 만들어진 홈페이지에요!</p>
-											<strong>싸이</strong> <span>가수</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/end row-->
-
-							<div class="row margin-bottom-20">
-								<div class="col-md-6 md-margin-bottom-50">
-									<div class="testimonials-info rounded-bottom">
-										<img class="rounded-x" src="assets/img/testimonials/img3.jpg"
-											alt="">
-										<div class="testimonials-desc">
-											<p>이곳에서 제 인생과 함께할 반려견을 얻었어요!</p>
-											<strong>IU</strong> <span>가수</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="testimonials-info rounded-bottom">
-										<img class="rounded-x" src="assets/img/testimonials/img2.jpg"
-											alt="">
-										<div class="testimonials-desc">
-											<p>우리 고양이랑 재미있게 놀고있어요!</p>
-											<strong>이찬혁</strong> <span>가수/군인</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--/end row-->
-						</div>
-						<!-- End Testimonials Wrap -->
-					</div>
-					<!--/end container-->
-				</div>
-				<!--=== End Testimonials v6 ===-->
-				<!--=== Owl Clients v1 ===-->
+			<!--=== End Team v3 ===-->
+			<!--=== Testimonials v6 ===-->
+			<div class="bg-color-light">
 				<div class="container content-sm">
-					<div class="owl-clients-v1">
-						<div class="item">
-							<img src="assets/img/clients4/1.png" alt="">
+					<div class="headline-center margin-bottom-60">
+						<h2>Dear My Pet</h2>
+						<p>사람들은 저희를 보고 뭐라고 말할까요?</p>
+					</div>
+
+					<!-- Testimonials Wrap -->
+					<div class="testimonials-v6 testimonials-wrap">
+						<div class="row margin-bottom-50">
+							<div class="col-md-6 md-margin-bottom-50">
+								<div class="testimonials-info rounded-bottom">
+									<img class="rounded-x" src="assets/img/testimonials/img5.jpg"
+										alt="">
+									<div class="testimonials-desc">
+										<p>DMP는 정말 멋있어요!</p>
+										<strong>스티븐 시걸</strong> <span>액션배우</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="testimonials-info rounded-bottom">
+									<img class="rounded-x" src="assets/img/testimonials/img6.jpg"
+										alt="">
+									<div class="testimonials-desc">
+										<p>정말로 잘 만들어진 홈페이지에요!</p>
+										<strong>싸이</strong> <span>가수</span>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<img src="assets/img/clients4/2.png" alt="">
+						<!--/end row-->
+
+						<div class="row margin-bottom-20">
+							<div class="col-md-6 md-margin-bottom-50">
+								<div class="testimonials-info rounded-bottom">
+									<img class="rounded-x" src="assets/img/testimonials/img3.jpg"
+										alt="">
+									<div class="testimonials-desc">
+										<p>이곳에서 제 인생과 함께할 반려견을 얻었어요!</p>
+										<strong>IU</strong> <span>가수</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="testimonials-info rounded-bottom">
+									<img class="rounded-x" src="assets/img/testimonials/img2.jpg"
+										alt="">
+									<div class="testimonials-desc">
+										<p>우리 고양이랑 재미있게 놀고있어요!</p>
+										<strong>이찬혁</strong> <span>가수/군인</span>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="item">
-							<img src="assets/img/clients4/3.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/4.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/5.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/6.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/7.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/8.png" alt="">
-						</div>
-						<div class="item">
-							<img src="assets/img/clients4/9.png" alt="">
-						</div>
+						<!--/end row-->
+					</div>
+					<!-- End Testimonials Wrap -->
+				</div>
+				<!--/end container-->
+			</div>
+			<!--=== End Testimonials v6 ===-->
+			<!--=== Owl Clients v1 ===-->
+			<div class="container content-sm">
+				<div class="owl-clients-v1">
+					<div class="item">
+						<img src="assets/img/clients4/1.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/2.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/3.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/4.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/5.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/6.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/7.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/8.png" alt="">
+					</div>
+					<div class="item">
+						<img src="assets/img/clients4/9.png" alt="">
 					</div>
 				</div>
-				<!--=== End Owl Clients v1 ===-->
+			</div>
+			<!--=== End Owl Clients v1 ===-->
 
 
-			</div> <!-- container -->
+		</div>
+		<!-- container -->
 	</div>
+</div>

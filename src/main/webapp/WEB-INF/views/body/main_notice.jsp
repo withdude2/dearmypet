@@ -1,62 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="ko" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="ko" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="ko">
-<!--<![endif]-->
-<head>
-<title>공지사항</title>
-<!-- Meta -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<!-- Favicon -->
-<link rel="shortcut icon" href="favicon.ico">
-
-<!-- Web Fonts -->
-<link rel='stylesheet' type='text/css'
-	href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-
-<!-- CSS Global Compulsory -->
-<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-
-<!-- CSS Header and Footer -->
-<link rel="stylesheet" href="assets/css/headers/header-default.css">
-<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
-
-<!-- CSS Implementing Plugins -->
-<link rel="stylesheet" href="assets/plugins/animate.css">
-<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-<!-- CSS Page Style -->    
-<link href="assets/css/pages/blog_masonry_3col.css" rel="stylesheet">
-
-<!-- CSS Customization -->
-<link rel="stylesheet" href="assets/css/custom.css">
-</head>
-
-<body>
-	<div class="wrapper">
-		<!--=== Breadcrumbs ===-->
-		<div class="breadcrumbs">
-			<div class="container">
-				<h1 class="pull-left">공지사항</h1>
-				<ul class="pull-right breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li class="active">공지사항</li>
-				</ul>
-			</div>
+<div class="body-benner text-block-type1">
+	<!--=== Breadcrumbs ===-->
+	<div class="breadcrumbs" style="padding:0px 10px 0px 10px">
+		<div>
+			<h1 class="pull-left">공지사항</h1>
+			<ul class="pull-right breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li class="active">공지사항</li>
+			</ul>
 		</div>
-		<!--/breadcrumbs-->
+	</div>
+	<!--/breadcrumbs-->
+</div>
+<div class="body-text text-block-type1">
+	<div class="wrapper">
 		<!--=== End Breadcrumbs ===-->
 	    <div class="blog_masonry_3col">
-	        <div class="container content grid-boxes">
+	        <div class="content-masonry grid-boxes">
 	            <!-- 본문 그리드 1 -->
 				<div class="grid-boxes-in">
 				    <div class="grid-boxes-caption">
@@ -192,35 +153,7 @@
 				    </div>
 				</div>
 				<!-- END 본문 그리드 -->
-	        
-	        
 	        </div>
 	    </div>
 	</div>
-
-
-<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-<!-- JS Implementing Plugins -->           
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="assets/plugins/masonry/jquery.masonry.min.js"></script>
-<!-- JS Customization -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
-<!-- JS Page Level -->           
-<script type="text/javascript" src="assets/js/app.js"></script>
-<script type="text/javascript" src="assets/js/pages/blog-masonry.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        App.init();
-        });
-</script>
-	<!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-<![endif]-->
-
-</body>
-</html>
+</div>

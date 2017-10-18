@@ -106,6 +106,21 @@
 	<mvc:view-controller path="/board/protect.dmp" view-name="board/protect.tiles" />
 	<mvc:view-controller path="/board/protect_form.dmp" view-name="board/protect_form.tiles" />
 	
+	<!-- 금호씨 자료 -->
+	<mvc:view-controller path="/main_survey.dmp" view-name="main_survey.tiles" />
+	<mvc:view-controller path="/main_addNotice.dmp" view-name="main_addNotice.tiles" />
+	<mvc:view-controller path="/main_report.dmp" view-name="main_report.tiles" />
+	
+	<!-- 진환씨 자료 admin페이지 dmptiles-->
+	<mvc:view-controller path="/dmp_adoption.dmp" view-name="dmp_adoption.dmptiles" />
+	<mvc:view-controller path="/dmp_board.dmp" view-name="dmp_board.dmptiles" />
+	<mvc:view-controller path="/dmp_generalmember.dmp" view-name="dmp_generalmember.dmptiles" />
+	<mvc:view-controller path="/dmp_groupmember.dmp" view-name="dmp_groupmember.dmptiles" />
+	<mvc:view-controller path="/dmp_history.dmp" view-name="dmp_history.dmptiles" />
+	<mvc:view-controller path="/dmp_parcel.dmp" view-name="dmp_parcel.dmptiles" />
+	<mvc:view-controller path="/dmp_protectanilist.dmp" view-name="dmp_protectanilist.dmptiles" />
+	<mvc:view-controller path="/dmp_protectgrouplist.dmp" view-name="dmp_protectgrouplist.dmptiles" />
+	<mvc:view-controller path="/dmp_reply.dmp" view-name="dmp_reply.dmptiles" />
 	
 	<!-- <mvc:view-controller path="/Member/registerMember.dmp" view-name="Member/registerMember.tiles" /> -->
 	<!-- test -->
