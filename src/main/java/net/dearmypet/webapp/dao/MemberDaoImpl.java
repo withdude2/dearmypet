@@ -6,13 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import net.dearmypet.webapp.vo.LoginVO;
 
-import java.util.List;
-
-import org.apache.log4j.*;
-
 @Repository("memberDao")
 public class MemberDaoImpl implements MemberDao {
-	private Logger log=Logger.getLogger(this.getClass());
 
 	private SqlSessionTemplate session;
 
