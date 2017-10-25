@@ -5,86 +5,69 @@ var RegForm = function () {
         //Registration Form
         initRegForm: function () {
 	        // Validation
-	        $("#sky-form4").validate({                   
+	        $("#memberReg").validate({
 	            // Rules for form validation
 	            rules:
 	            {
-	                username:
+	            	lg_id:
 	                {
 	                    required: true
 	                },
-	                email:
+	                lg_email:
 	                {
 	                    required: true,
 	                    email: true
 	                },
-	                password:
+	                lg_password:
 	                {
 	                    required: true,
 	                    minlength: 3,
 	                    maxlength: 20
 	                },
-	                passwordConfirm:
+	                lg_passwordConfirm:
 	                {
 	                    required: true,
 	                    minlength: 3,
 	                    maxlength: 20,
-	                    equalTo: '#password'
+	                    equalTo: '#lg_password'
 	                },
-	                firstname:
-	                {
-	                    required: true
+	                lg_nickname:{
+	                	required: true,
+	                    minlength: 3,
+	                    maxlength: 20
 	                },
-	                lastname:
-	                {
-	                    required: true
-	                },
-	                gender:
-	                {
-	                    required: true
-	                },
-	                terms:
-	                {
-	                    required: true
+	                lg_logintype:{
+	                	required: true
 	                }
+	                
 	            },
 	            
 	            // Messages for form validation
 	            messages:
 	            {
-	                login:
+	            	lg_id:
 	                {
 	                    required: 'ID를 입력해주세요'
 	                },
-	                email:
+	                lg_email:
 	                {
 	                    required: '이메일 주소를 입력해주세요',
 	                    email: '정확한 형식으로 입력해주세요'
 	                },
-	                password:
+	                lg_password:
 	                {
 	                    required: '비밀번호를 입력해주세요'
 	                },
-	                passwordConfirm:
+	                lg_passwordConfirm:
 	                {
 	                    required: '비밀번호를 다시한번 입력해주세요',
 	                    equalTo: '비밀번호가 다릅니다 정확하게 다시 입력해주세요'
 	                },
-	                firstname:
-	                {
-	                    required: 'Please select your first name'
+	                lg_nickname:{
+	                	required: '닉네임을 입력해주세요'
 	                },
-	                lastname:
-	                {
-	                    required: 'Please select your last name'
-	                },
-	                gender:
-	                {
-	                    required: 'Please select your gender'
-	                },
-	                terms:
-	                {
-	                    required: 'You must agree with Terms and Conditions'
+	                lg_logintype:{
+	                	required: ''
 	                }
 	            },                  
 	            

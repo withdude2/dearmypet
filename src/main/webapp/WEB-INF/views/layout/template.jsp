@@ -62,7 +62,7 @@
 
 <!-- 페이지별 불러오는 CSS들 -->
 <%
-	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp")){
+	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp") || !request.getAttribute("javax.servlet.forward.request_uri").equals("/memberRegister.do")){
 %>
 	<tiles:insertAttribute name = "css"/>
 <%
@@ -82,7 +82,7 @@
 
 	<!-- container -->
 	<div class="wrapper main-body-content">
-		<tiles:insertAttribute name = "body"/>
+		<tiles:insertAttribute name = "body" ignore="true"/>
 	</div>
 	<!--// container -->
 	
@@ -92,7 +92,7 @@
 	
 	<!-- js -->
 	<%
-	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp")){
+	if(!request.getAttribute("javax.servlet.forward.request_uri").equals("/LoginAllList.dmp") || !request.getAttribute("javax.servlet.forward.request_uri").equals("/memberRegister.do")){
 	%>
 		<tiles:insertAttribute name = "js"/>
 	<%

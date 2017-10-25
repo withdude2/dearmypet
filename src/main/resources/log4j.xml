@@ -31,6 +31,11 @@
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
+	
+	<category name="net.dearmypet.webapp.dao">
+		<priority value="debuge"/>
+		<appender-ref ref="console"/>
+	</category>
 
 	<!-- Root Logger -->
 	<root>

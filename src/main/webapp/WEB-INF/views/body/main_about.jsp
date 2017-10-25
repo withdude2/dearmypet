@@ -3,17 +3,17 @@
 
 <div class="body-text text-block-type1">
 	<div class="wrapper">
-		<div class="container">
+		<div>
 			<!--=== Interactive Slider ===-->
 			<div class="breadcrumbs-v3 img-v1 text-center">
-				<div class="container">
+				<div>
 					<h1>Dear My Pet</h1>
 					<p>애완동물을 사랑하는 사람들</p>
 				</div>
 			</div>
 			<!--=== End Interactive Slider ===-->
 			<!--=== Title v1 ===-->
-			<div class="container content-sm">
+			<div class="content-sm">
 				<div class="title-v1 no-margin-bottom">
 					<p class="no-margin-bottom">우리는 무슨 일을 할까요?</p>
 				</div>
@@ -21,7 +21,7 @@
 			<!--=== End Title v1 ===-->
 			<!--=== Service Block v4 ===-->
 			<div class="service-block-v4">
-				<div class="container content-sm">
+				<div class="content-sm">
 					<div class="row">
 						<div class="col-md-4 service-desc md-margin-bottom-50">
 							<i class="icon-user-following"></i>
@@ -46,7 +46,7 @@
 			<!--=== End Service Block v4 ===-->
 			<!--=== Parallax Counter v4 ===-->
 			<div class="parallax-counter-v4 parallaxBg">
-				<div class="container content-sm">
+				<div class="content-sm">
 					<div class="row">
 						<div class="col-md-4 col-xs-4">
 							<i class=" icon-action-redo"></i> <span class="counter">265</span>
@@ -67,7 +67,7 @@
 			</div>
 			<!--=== End Parallax Counter v4 ===-->
 			<!--=== Team v3 ===-->
-			<div class="container content-sm">
+			<div class="content-sm">
 				<div class="headline-center margin-bottom-60">
 					<h2>우리팀을 소개합니다.</h2>
 					<p>동물을 사랑하고 사람들과 소통하길 좋아하는 우리 팀원들</p>
@@ -159,7 +159,7 @@
 			<!--=== End Team v3 ===-->
 			<!--=== Testimonials v6 ===-->
 			<div class="bg-color-light">
-				<div class="container content-sm">
+				<div class="content-sm">
 					<div class="headline-center margin-bottom-60">
 						<h2>Dear My Pet</h2>
 						<p>사람들은 저희를 보고 뭐라고 말할까요?</p>
@@ -221,7 +221,7 @@
 			</div>
 			<!--=== End Testimonials v6 ===-->
 			<!--=== Owl Clients v1 ===-->
-			<div class="container content-sm">
+			<div class="content-sm">
 				<div class="owl-clients-v1">
 					<div class="item">
 						<img src="assets/img/clients4/1.png" alt="">

@@ -3,6 +3,7 @@ package net.dearmypet.webapp.vo;
 import java.io.Serializable;
 
 public class LoginVO implements Serializable{
+	private static final long serialVersionUID = 1L; //객체 직렬화-/-역직렬화 대비
 	private int lg_no;
 	private String lg_id;
 	private String lg_profile;

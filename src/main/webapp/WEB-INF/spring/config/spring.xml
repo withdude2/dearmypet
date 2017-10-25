@@ -21,7 +21,7 @@
  	<bean name="SqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation" value="/WEB-INF/spring/config/mybatis/mybatis-config.xml" />
 		<property name="dataSource" ref="BasicDataSourceclass" />
-		<property name="mapperLocations"  value="/WEB-INF/spring/config/mybatis/*Mapper.xml" />
+		<property name="mapperLocations" value="/WEB-INF/spring/config/mybatis/*Mapper.xml"/>
 	</bean>
 	<!-- 
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -92,7 +92,8 @@
 	<!-- 메인 페이지 연결 -->
 	<mvc:view-controller path="/main.dmp" view-name="main.tiles" />
 	<!-- 회원가입 페이지 -->
-	<mvc:view-controller path="/main_Sign_Up.dmp" view-name="main_Sign_Up.tiles" />
+	<mvc:view-controller path="/main_Sign_Up.dmp" view-name="register/main_Sign_Up.tiles" />
+	<mvc:view-controller path="/main_Sign_Up_Result.dmp" view-name="register/main_Sign_Up_Result.tiles" />
 	<!-- 동물정보 페이지 -->
 	<mvc:view-controller path="/main_know.dmp" view-name="main_know.tiles" />
 	<!-- 공지사항 페이지 -->

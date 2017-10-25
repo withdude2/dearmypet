@@ -15,13 +15,11 @@
 				<div class="col-md-2 col-lg-2">
 					<a class="btn btn-danger btn-block" id="compose-btn" href="#">분류</a>
 
-					<ul class="nav nav-pills nav-stacked nav-email-folders mt"
-						id="folders-list">
-						<li class="active"><a href="inbox.html"> <span
-								class="badge pull-right">2</span> 자유게시판
-						</a></li>
+					<ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
+						<li class="active"><a href="inbox.html"> <span class="badge pull-right">2</span> 자유게시판</a></li>
 						<li><a href="#">보호신고</a></li>
 						<li><a href="#">실종신고</a></li>
+					</ul>
 				</div>
 				<div class="col-md-10">
 					<section class="widget">
@@ -211,8 +209,9 @@
 								</div>
 							</div>
 						</div>
+					</section>
 				</div>
-				</section>
+				
 			</div>
 		</div>
 
