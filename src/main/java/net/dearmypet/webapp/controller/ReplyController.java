@@ -29,7 +29,7 @@ public class ReplyController {
 	@RequestMapping(value="/add.jsn", method= RequestMethod.POST)
 	public  ResponseEntity<Map<String,Object>>  register(@RequestBody ReplyVO replyVO,PageVO pageVO) {
 		System.out.println("regiter 들어옴");
-		Map<String,Object> map= new HashMap<>();
+		Map<String,Object> map= new HashMap<String,Object>();
 		
 		 ResponseEntity<Map<String,Object>>  entity = null;
 		
