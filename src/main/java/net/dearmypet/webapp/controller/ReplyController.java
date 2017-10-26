@@ -64,7 +64,7 @@ public class ReplyController {
 	 	map.put("relylist",service.listReply(mb_no,pageVO));
 			pageVO.setTotalCount(service.listCount(mb_no)); 
 			map.put("pageVO",pageVO);
-			entity=new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
+			entity=new ResponseEntity<Map<String,Object>>(HttpStatus.OK);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
