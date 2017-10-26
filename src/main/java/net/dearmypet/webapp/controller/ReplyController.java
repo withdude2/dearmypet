@@ -64,11 +64,11 @@ public class ReplyController {
 	 	map.put("relylist",service.listReply(mb_no,pageVO));
 			pageVO.setTotalCount(service.listCount(mb_no)); 
 			map.put("pageVO",pageVO);
-			entity=new ResponseEntity<>(map,HttpStatus.OK);
+			entity=new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			entity=new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			entity=new ResponseEntity<Map<String,Object>>(HttpStatus.BAD_REQUEST);
 			//실패시 400 error 전송함
 		}
 		
