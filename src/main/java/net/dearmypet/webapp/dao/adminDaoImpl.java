@@ -30,7 +30,7 @@ public class adminDaoImpl implements adminDao{
 
 	 
 	@Override
-	public void delete(Map map) throws Exception {
+	public void delete(Map<String,Object> map) throws Exception {
 		// TODO Auto-generated method stub
 
 		session.update(namespace+".delete", map);		

@@ -11,7 +11,7 @@ public interface adminService {
 	
  
 	public BoardVO read(Integer mb_no) throws Exception;
-	public void remove(Map map) throws Exception;
+	public void remove(Map<String,Object> map) throws Exception;
 	
 	
 	

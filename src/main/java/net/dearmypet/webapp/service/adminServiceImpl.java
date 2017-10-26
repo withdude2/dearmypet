@@ -31,7 +31,7 @@ public class adminServiceImpl implements adminService {
  
 
 	@Override
-	public void remove(Map map) throws Exception {
+	public void remove(Map<String,Object> map) throws Exception {
 		// TODO Auto-generated method stub
 		adminDao.delete(map);
 	}

@@ -9,7 +9,7 @@ import net.dearmypet.webapp.vo.PageVO;
 public interface adminDao {
 
 	public BoardVO read(Integer mb_no)throws Exception;
-	public void delete(Map map)throws Exception;
+	public void delete(Map<String,Object> map)throws Exception;
 
 	
 	
