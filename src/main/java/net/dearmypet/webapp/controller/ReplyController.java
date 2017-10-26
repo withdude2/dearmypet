@@ -58,7 +58,7 @@ public class ReplyController {
 		System.out.println("mb_no="+mb_no); 
 		ResponseEntity<Map<String,Object>> entity = null;
 		
-		Map<String,Object> map= new HashMap<>();
+		Map<String,Object> map= new HashMap<String,Object>();
 		try {	
 
 	 	map.put("relylist",service.listReply(mb_no,pageVO));
