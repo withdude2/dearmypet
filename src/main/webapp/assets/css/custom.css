@@ -139,6 +139,13 @@ footer{
 	display: none;
 }
 
+/* 메인페이지 디자인 하는 부분 */
+img.center{
+	margin:0 auto;
+}
+.owl-item{
+	width:200px;
+}
 @media (min-width: 991px){
 	.nav-hidden{
 		display:block!important;

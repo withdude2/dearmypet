@@ -1,5 +1,7 @@
 package net.dearmypet.webapp.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -46,6 +48,10 @@ public class MemberDaoImpl implements MemberDao {
 		return session.insert("memberMapper.insertMember", memberVo);
 	}
 	
-
-
+	@Override
+	public List<LoginVO> selectDefaultMember(int mType) {
+		// TODO Auto-generated method stub
+		
+		return session.selectList("memberMapper.selectDefaultMember",mType);
+	}
 }

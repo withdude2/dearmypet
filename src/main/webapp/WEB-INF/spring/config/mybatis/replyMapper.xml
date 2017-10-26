@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.reply">
+
+
+	
+	<!--댓글가져오기-->	 	
+	<select id="listReply" parameterType="hashmap" resultType="ReplyVO">
+		SELECT
+		*
+		FROM reply
+		WHERE  mb_no=#{mb_no}
+		order by re_ref_step  desc,re_date
+		
+		limit #{pageStart} , 10
+	 
+	</select>
+
+	 
+	 
+	 
+	 
+	<!--댓글갯수파악하기  -->	 
+	 <select id="listCount" resultType="int">
+		<![CDATA[
+			SELECT	count(mb_no) 
+			FROM reply
+			WHERE  mb_no=#{mb_no}
+		
+		]]> 
+	
+	 </select>
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	<insert id="create">
+		INSERT INTO reply 
+		(re_id, re_con,re_ref_step,re_ref_level,lg_no,mb_no,mb_no3,mb_no2,re_typeno)
+		VALUES 
+		(#{re_id}, #{re_con},#{re_ref_step},0,0,#{mb_no},#{mb_no3},#{mb_no2},#{re_typeno})
+		</insert>
+
+	<update id="update" >
+		UPDATE reply
+		SET
+		re_con=#{re_con}
+		WHERE
+		re_no= #{re_no}
+	</update>
+
+	<delete id="delete" >
+		DELETE FROM reply
+		WHERE
+		re_no= #{re_no}
+	</delete>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

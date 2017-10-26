@@ -2,8 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
--${memberVO.lg_nickname}-
 <%
 //Register.jsp->RegisterProc.jsp
 request.setCharacterEncoding("utf-8");
@@ -28,7 +26,15 @@ mem.setMem_id(request.getParameter("mem_id"));
 		<fieldset>
 			<section>
 				<label class="input"> <i class="icon-append fa fa-user"></i>
+<c:set var="nRetnumber" value="${ok}" />
+<c:choose>
+	<c:when test="${nRetnumber ne -2}">
 					<input type="text" name="lg_id" id="lg_id" placeholder="아이디 입력">
+	</c:when>
+	<c:otherwise>
+					<input type="text" name="lg_id" id="lg_id" placeholder="중복 ID를 사용하셨습니다 다시 입력해주세요">
+	</c:otherwise>
+</c:choose>
 					<b class="tooltip tooltip-bottom-right">당신이 사용할 ID를 입력해주세요</b>
 				</label>
 			</section>

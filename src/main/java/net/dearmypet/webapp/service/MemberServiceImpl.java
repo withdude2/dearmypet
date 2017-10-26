@@ -1,6 +1,8 @@
 package net.dearmypet.webapp.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,5 +49,19 @@ public class MemberServiceImpl implements MemberService {
 
 		return nRetJoin;
 	}
-
+	@Override
+	public Map getMemberList(int mType) {
+		// TODO Auto-generated method stub
+		HashMap map = new HashMap();
+		
+		List<LoginVO> List = memberDao.selectDefaultMember(mType);
+		map.put("list", List);
+		
+		return map;
+	}
+	@Override
+	public LoginVO upDateMember(LoginVO memberVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

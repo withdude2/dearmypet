@@ -16,7 +16,7 @@ System.out.println("nic => "+nic);
 
 <div class="body-text text-block-type1">
 
-<button class="btn-u btn-brd btn-brd-hover roundeed btn-u-sea btn-u-lg">반려동물 등록하기</button>
-<button class="btn-u btn-brd btn-brd-hover roundeed btn-u-green btn-u-lg">메인으로 돌아가기</button>
+<a href="/main.dmp" class="btn-u btn-brd btn-brd-hover roundeed btn-u-sea btn-u-lg">반려동물 등록하기</a>
+<a href="/animal_Sign_Up.dmp" class="btn-u btn-brd btn-brd-hover roundeed btn-u-green btn-u-lg">메인으로 돌아가기</a>
 
 </div>

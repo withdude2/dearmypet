@@ -13,4 +13,6 @@ public interface MemberDao {
 	
 	public int insertMember(LoginVO memberVo); // 일반회원가입
 	
+	public List<LoginVO> selectDefaultMember(int mType);//전체 일반회원 검색
+	
 }

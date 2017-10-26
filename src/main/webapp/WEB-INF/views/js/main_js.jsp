@@ -3,10 +3,13 @@
     
 	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/jquery-appear.js"></script>
 	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/jquery.parallax.js"></script>
+	<script type="text/javascript" src="${initParam.rootPath}/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="${initParam.rootPath}/assets/js/plugins/owl-carousel.js"></script>
 
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
+			OwlCarousel.initOwlCarousel();
 		});
 	</script>
 <!--[if lt IE 9]>

@@ -19,7 +19,7 @@
 		Select lg_no, lg_id, lg_profile, lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type
 		From login
 	</sql>
-	
+	<!-- 중복아이디 체크를 위한 id기준 전체 회원 검색 1개만 출력 -->
 	<select id="selectMemberById" resultType="LoginVO" parameterType="String">
 		<include refid="select-Member"/>
 		where lg_id = #{lg_id}
@@ -30,7 +30,7 @@
 		<include refid="select-Member"/>
 		Order by lg_no asc
 	</select>
-	
+	<!-- 일반회원번호 증가 -->
 	<select id="memberMaxNumCheck" resultType="int">
 		select max(m_no) from login
 	</select>
@@ -39,6 +39,12 @@
 	<insert id="insertMember" parameterType="LoginVO">
 		insert into login(lg_no,lg_id,lg_profile,lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type) values(#{lg_no},#{lg_id},#{lg_profile},#{lg_password},#{lg_email},#{lg_nickname},#{lgfb_no},#{lgka_no},#{m_no},#{lg_login_type})
 	</insert>
+	
+	<!-- 일반회원 목록 출력 -->
+	<select id="selectDefaultMember" resultType="LoginVO" parameterType="int">
+		<include refid="select-Member"/>
+		where lg_login_type = #{lg_login_type}
+	</select>
 	
 	<!-- 일반 회원 수정 -->
 	<update id="updateMember">

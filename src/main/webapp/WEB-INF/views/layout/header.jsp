@@ -64,6 +64,8 @@
 	                        </a>
 	                        <ul class="dropdown-menu">
 	                            <li><a href="/main_Sign_Up.dmp">회원가입</a></li>
+	                            <li><a href="/animal_Sign_Up.dmp">동물등록</a></li>
+	                            
 	
 	                            <!-- One Page -->
 	                            <li class="dropdown-submenu">
