@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
  
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,17 +28,21 @@ public class ReplyController {
 	
 	/*댓글추 가*/
 	@RequestMapping(value="/add.jsn", method= RequestMethod.POST)
-	public  ResponseEntity<Map<String,Object>>  register(@RequestBody ReplyVO replyVO,PageVO pageVO) {
+	public  ResponseEntity<Map<String,Object>>  register( ReplyVO replyVO) {
 		System.out.println("regiter 들어옴");
-		Map<String,Object> map= new HashMap<String,Object>();
+		Map<String,Object> map= new HashMap<>();
 		
+		PageVO pageVO=new PageVO();
 		 ResponseEntity<Map<String,Object>>  entity = null;
 		
 		try {
 			service.addReply(replyVO);
-			
-			map.put("relylist",service.listReply(replyVO.getMb_no(),pageVO));
-			pageVO.setTotalCount(service.listCount(replyVO.getMb_no())); 
+			System.out.println("addreply 완료")
+			;
+			map.put("replylist",service.listReply(replyVO.getMb_no(),pageVO));
+			System.out.println(service.listReply(replyVO.getMb_no(),pageVO));
+			pageVO.setTotalCount(service.listCount(replyVO.getMb_no()));
+			System.out.println("totalcount"+pageVO.getTotalCount());
 			map.put("pageVO",pageVO);
 	
 			
@@ -50,25 +55,28 @@ public class ReplyController {
 	}  
 	
 	/*리스트*/
-	@RequestMapping("/{mb_no}/reply.jsn")
-	public ResponseEntity<Map<String,Object>> list(@PathVariable("mb_no") int mb_no,PageVO pageVO	){
+	@PostMapping("/{mb_no}/reply.jsn")
+	public ResponseEntity<Map<String,Object>> list(@PathVariable("mb_no") int mb_no, ReplyVO replyVO){
 	 
 		System.out.println("list 들어옴");
 	
 		System.out.println("mb_no="+mb_no); 
 		ResponseEntity<Map<String,Object>> entity = null;
 		
-		Map<String,Object> map= new HashMap<String,Object>();
+		Map<String,Object> map= new HashMap<>();
+		PageVO pageVO=new PageVO();
 		try {	
 
 	 	map.put("relylist",service.listReply(mb_no,pageVO));
-			pageVO.setTotalCount(service.listCount(mb_no)); 
-			map.put("pageVO",pageVO);
-			entity=new ResponseEntity<Map<String,Object>>(HttpStatus.OK);
 			
+			map.put("replylist",service.listReply(replyVO.getMb_no(),pageVO));
+			pageVO.setTotalCount(service.listCount(replyVO.getMb_no()));
+			System.out.println("totalcount"+pageVO.getTotalCount());
+			map.put("pageVO",pageVO);
+			entity=new ResponseEntity<>(map,HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			entity=new ResponseEntity<Map<String,Object>>(HttpStatus.BAD_REQUEST);
+			entity=new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 			//실패시 400 error 전송함
 		}
 		

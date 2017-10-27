@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="net.dearmypet.webapp.dao.MemberDao">
-	<resultMap type="asdasd" id="member-resultmap">
+<mapper namespace="memberMapper">
+	<resultMap type="LoginVO" id="member-resultmap">
 		<id property="lg_no" column="lg_no"/>
 		<result property="lg_id" column="lg_id"/>
 		<result property="lg_profile" column="lg_profile"/>
@@ -19,10 +19,10 @@
 		Select lg_no, lg_id, lg_profile, lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type
 		From login
 	</sql>
-	
-	<select id="selectMemberById" resultType="MemberVO">
-		Select lg_no, lg_id, lg_profile, lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type
-		From login
+	<!-- 중복아이디 체크를 위한 id기준 전체 회원 검색 1개만 출력 -->
+	<select id="selectMemberById" resultType="LoginVO" parameterType="String">
+		<include refid="select-Member"/>
+		where lg_id = #{lg_id}
 	</select>
 	
 	<!-- 전체 회원 검색 -->
@@ -30,16 +30,26 @@
 		<include refid="select-Member"/>
 		Order by lg_no asc
 	</select>
+	<!-- 일반회원번호 증가 -->
+	<select id="memberMaxNumCheck" resultType="int">
+		select max(m_no) from login
+	</select>
 	
 	<!-- 일반 회원 가입 -->
-	<insert id="insertMember" parameterType="MemberVO">
-		insert into login(lg_id,lg_profile,lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type) values(#{lg_id},#{lg_profile},#{lg_password},#{lg_email},#{lg_nickname},#{lgfb_no},#{lgka_no},#{m_no},#{lg_login_type})
+	<insert id="insertMember" parameterType="LoginVO">
+		insert into login(lg_no,lg_id,lg_profile,lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type) values(#{lg_no},#{lg_id},#{lg_profile},#{lg_password},#{lg_email},#{lg_nickname},#{lgfb_no},#{lgka_no},#{m_no},#{lg_login_type})
 	</insert>
+	
+	<!-- 일반회원 목록 출력 -->
+	<select id="selectDefaultMember" resultType="LoginVO" parameterType="int">
+		<include refid="select-Member"/>
+		where lg_login_type = #{lg_login_type}
+	</select>
 	
 	<!-- 일반 회원 수정 -->
 	<update id="updateMember">
 		update login set
-			lg_no = 2 #{lg_no}, lg_id = #{lg_id}, lg_profile = #{lg_profile}, 
+			lg_no = #{lg_no}, lg_id = #{lg_id}, lg_profile = #{lg_profile}, 
 			lg_password = #{lg_password}, lg_email = #{lg_email}, lg_nickname = #{lg_nickname},
 			lgfb_no = #{lgfb_no}, lgka_no = #{lgka_no}, m_no = #{m_no},
 			lg_login_type = #{lg_login_type}
@@ -52,7 +62,7 @@
 	</delete>
 	
 	<!-- 일반 회원 검색 lg_login_type [1=페이스북, 2=카카오톡, 3=일반회원]-->
-	<select id="selectMemberByLoginType" resultType="MemberVO">
+	<select id="selectMemberByLoginType" resultType="LoginVO">
 		<include refid="select-Member"/>
 		Where lg_login_type = 3
 	</select>

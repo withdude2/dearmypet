@@ -22,7 +22,7 @@ import net.dearmypet.webapp.vo.PageVO;
  
  
 @Controller 
-@RequestMapping("/main")
+@RequestMapping("/board")
 public class BoardController {
 
  
@@ -47,7 +47,7 @@ public class BoardController {
 	 pageVO.setTotalCount(service.listSearchCount(pageVO)); 
 	 mv.addAttribute("pageVO",pageVO);
 	 
-	  return "/board/board.dmp";
+	  return "/board/boarder.dmp";
 	}
 	 	
 	@PostMapping("/register.dmp")
@@ -57,7 +57,7 @@ public class BoardController {
 	  mv.addAttribute("success", "success");
 	  service.regist(vo);
 	  
-	  return "redirect:/main/board.dmp";
+	  return "redirect:/board/board.dmp";
 	}
 	  
 	@GetMapping("/delete.dmp")
@@ -65,7 +65,7 @@ public class BoardController {
 	 System.out.println("board.dmp/delete");
 		
 	 service.remove(mb_no);
-	 	  return "redirect:/main/board.dmp";
+	 	  return "redirect:/board/board.dmp";
 	}
 	 
 	@PostMapping("/update.dmp")

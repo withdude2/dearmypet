@@ -17,27 +17,8 @@ public class ReplyVO {
 	private int mb_no3;
 	private String re_typeno;
 	
-	int tmb;
-public void setTmb(int mb) {
-		
-		
-		if(mb_no != 0) {
-			this.mb_no= mb;
-		}else if(mb_no2 != 0) {
-		
-			this.mb_no2=mb;
-		}else if(mb_no3 != 0)
-		{
-			this.mb_no3= mb;
-		}
-		
-	 	}
-	
-public int getTmb() {
-	
-	return tmb;
-	 		
- 	}
+ 
+ 
 
 	public int getRe_no() {
 		return re_no;

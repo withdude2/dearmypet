@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="animalMapper">
+	<resultMap type="LoginVO" id="animal-resultmap">
+		<id property="lg_no" column="lg_no"/>
+		<result property="lg_id" column="lg_id"/>
+		<result property="lg_profile" column="lg_profile"/>
+		<result property="lg_password" column="lg_password"/>
+		<result property="lg_email" column="lg_email"/>
+		<result property="lg_nickname" column="lg_nickname"/>
+		<result property="lgfb_no" column="lgfb_no"/>
+		<result property="lgka_no" column="lgka_no"/>
+		<result property="m_no" column="m_no"/>
+		<result property="lg_login_type" column="lg_login_type"/>
+	</resultMap>
+	
+	<!-- 공통된 쿼리문 -->
+	<sql id="select-Animal">
+		Select lg_no, lg_id, lg_profile, lg_password, lg_email, lg_nickname, lgfb_no, lgka_no, m_no, lg_login_type
+		From login
+	</sql>
+	
+</mapper>

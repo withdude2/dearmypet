@@ -12,12 +12,12 @@
 		*
 		FROM reply
 		WHERE  mb_no=#{mb_no}
-		order by re_date desc
+		order by re_ref_step  desc,re_date
 		
 		limit #{pageStart} , 10
 	 
 	</select>
- 
+
 	 
 	 
 	 
@@ -32,13 +32,23 @@
 		]]> 
 	
 	 </select>
-	  
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 	<insert id="create">
 		INSERT INTO reply 
-		(re_id, re_con,re_ref_step,re_ref_level,lg_no,mb_no,re_typeno)
+		(re_id, re_con,re_ref_step,re_ref_level,lg_no,mb_no,mb_no3,mb_no2,re_typeno)
 		VALUES 
-		(#{re_id}, #{re_con},#{re_ref_step},0,1,#{mb_no},1)
+		(#{re_id}, #{re_con},#{re_ref_step},0,0,#{mb_no},#{mb_no3},#{mb_no2},#{re_typeno})
 		</insert>
 
 	<update id="update" >

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.dearmypet.mappers.boardMapper">
+
+	<sql id="search">
+		<if test="searchType != null">
+			<if test="searchType=='t'.toString()">
+				and mb_sub like CONCAT('%',#{keyword},'%')
+			</if>
+			<if test="searchType=='c'.toString()">
+				and mb_con like CONCAT('%',#{keyword},'%')
+			</if>
+			<if test="searchType=='w'.toString()">
+				and mb_id like CONCAT('%',#{keyword},'%')
+			</if>
+			<if test="searchType=='tc'.toString()">
+				and (mb_sub like CONCAT('%',#{keyword},'%') OR mb_con like CONCAT('%',#{keyword},'%'))
+			</if>
+			<if test="searchType=='cw'.toString()">
+				and (mb_con like CONCAT('%',#{keyword},'%') OR mb_id like CONCAT('%',#{keyword},'%'))
+			</if>
+			<if test="searchType == 'tcw'.toString()">
+				and (mb_sub like CONCAT('%',#{keyword},'%') OR mb_con like CONCAT('%',#{keyword},'%') OR mb_id like CONCAT('%',#{keyword},'%'))
+			</if>
+		
+		</if>
+	</sql>
+
+
+
+
+
+
+	<select id="read" resultType="net.dearmypet.webapp.vo.BoardVO">
+		SELECT
+		mb_no,
+		mb_sub,
+
+		mb_date,
+		mb_id,
+		mb_con,
+		mb_count,
+		lg_no
+		
+		FROM main_board
+		WHERE mb_no = #{mb_no}
+	</select>
+
+	 
+
+
+	<insert id="create">
+		INSERT INTO main_board(mb_sub,mb_id,mb_con,lg_no)
+		VALUES(#{mb_sub},#{mb_sub},#{mb_con},#{lg_no})
+	</insert>
+
+	<update id="update">
+		UPDATE main_board
+		SET	mb_sub=#{mb_sub},mb_con=#{mb_con}		 
+		WHERE mb_no= #{mb_no}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM main_board WHERE mb_no= #{mb_no}
+	</delete>
+
+
+
+
+
+<select id="list" resultType="net.dearmypet.webapp.vo.BoardVO">
+	<![CDATA[
+		SELECT	* 
+		FROM main_board 
+		where  mb_no> 0
+	]]>
+	
+	
+</select>
+
+
+
+
+
+
+
+
+ 
+
+
+<select id="listSearch" resultType="net.dearmypet.webapp.vo.BoardVO">
+<![CDATA[
+	SELECT	* 
+	FROM main_board 
+	where  mb_no > 0
+]]>
+
+<include refid="search"></include>
+
+<![CDATA[
+
+	order by mb_no desc
+	limit #{pageStart} , #{perPageNum}
+]]>
+
+</select>
+
+
+<select id="listSearchCount" resultType="int">
+	<![CDATA[
+		SELECT	count(mb_no) 
+		FROM main_board 
+		where  mb_no > 0
+	]]> 
+	<include refid="search"></include>
+	</select>
+	
+	
+	
+</mapper>
+
