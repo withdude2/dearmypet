@@ -52,7 +52,9 @@ public class BoardController {
 	 	
 	@PostMapping("/register.dmp")
 	public String regiterGet(BoardVO vo,Model mv) throws Exception{
-	 System.out.println("board/res.dmp");
+		 System.out.println("board/res.dmp");
+		 System.out.println("sub"+vo.getMb_sub());
+		 
 		
 	  mv.addAttribute("success", "success");
 	  service.regist(vo);

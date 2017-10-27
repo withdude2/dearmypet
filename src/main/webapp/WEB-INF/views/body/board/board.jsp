@@ -407,7 +407,7 @@
 					<p> 
 					<p><textarea cols="60" rows="20"  class='create' name='mb_con' ></textarea></p>
 				</div>
-				<input type='hidden' name='mb_sub'/>
+			 
 				<input type='hidden' name='mb_con'/>
 				<input type='hidden' name='mb_id' value='${sessionScope.id}'/>
 				<input type='hidden' name='lg_no' value='1'/>
