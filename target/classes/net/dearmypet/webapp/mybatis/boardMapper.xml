@@ -52,7 +52,7 @@
 
 	<insert id="create">
 		INSERT INTO main_board(mb_sub,mb_id,mb_con,lg_no)
-		VALUES(#{mb_sub},#{mb_sub},#{mb_con},#{lg_no})
+		VALUES(#{mb_sub},#{mb_id},#{mb_con},#{lg_no})
 	</insert>
 
 	<update id="update">
