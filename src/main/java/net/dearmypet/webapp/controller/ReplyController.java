@@ -30,7 +30,7 @@ public class ReplyController {
 	@RequestMapping(value="/add.jsn", method= RequestMethod.POST)
 	public  ResponseEntity<Map<String,Object>>  register( ReplyVO replyVO) {
 		System.out.println("regiter 들어옴");
-		Map<String,Object> map= new HashMap<>();
+		Map<String,Object> map= new HashMap<String,Object>();
 		
 		PageVO pageVO=new PageVO();
 		 ResponseEntity<Map<String,Object>>  entity = null;
@@ -63,7 +63,7 @@ public class ReplyController {
 		System.out.println("mb_no="+mb_no); 
 		ResponseEntity<Map<String,Object>> entity = null;
 		
-		Map<String,Object> map= new HashMap<>();
+		Map<String,Object> map= new HashMap<String,Object>();
 		PageVO pageVO=new PageVO();
 		try {	
 
@@ -73,10 +73,10 @@ public class ReplyController {
 			pageVO.setTotalCount(service.listCount(replyVO.getMb_no()));
 			System.out.println("totalcount"+pageVO.getTotalCount());
 			map.put("pageVO",pageVO);
-			entity=new ResponseEntity<>(map,HttpStatus.OK);
+			entity=new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			entity=new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			entity=new ResponseEntity<Map<String,Object>>(HttpStatus.BAD_REQUEST);
 			//실패시 400 error 전송함
 		}
 		
